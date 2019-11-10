@@ -8,8 +8,8 @@ class complex{
         real = im = 0;
     }
     complex(int real, int im){
-        real = real;
-        im = im;
+        this->real = real;
+        this->im = im;
     }
     void init(){
         cout<<"Enter the real and imaginary parts ";
@@ -21,7 +21,7 @@ class complex{
     }
 
     complex operator+(complex b){
-        return (complex(real + b.real, im+b.im);
+        return (complex(real + b.real, im+b.im));
     }
 
 };
@@ -30,5 +30,7 @@ int main(){
     complex c1, c2(5, 3);
     c1.init();
     complex c3 = c1 + c2;
-
+    c1.display();
+    c2.display();
+    c3.display();
 }

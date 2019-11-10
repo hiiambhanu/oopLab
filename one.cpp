@@ -6,6 +6,6 @@ long pow(double n, int p = 2){
     return temp;
 }
 int main(){
-    cout<<pow(2,10);
+    cout<<pow(2,10)<<endl;
     cout<<pow(2);
 }

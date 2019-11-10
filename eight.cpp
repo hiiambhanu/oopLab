@@ -1,4 +1,5 @@
 #include<iostream>
+#include<stdio.h>
 using namespace std;
 class Employee{
     protected:
@@ -8,12 +9,20 @@ class Employee{
 class Manager: public Employee{
     char department[50];
     public:
+    void get(){
+        cout<<"Enter the name ";
+        cin>>name;
+        cout<<"Enter the department ";
+        cin>>department;
+        cout<<"Enter the salary ";
+        cin>>salary;
+    }
     void show();
 };
 void Manager::show(){
     cout<<"Name: ";
     puts(name);
-    cout<<"\n Salary: "<<salary<<"\n Department: "<<department;
+    cout<<"\nSalary: "<<salary<<"\nDepartment: "<<department<<endl;
 } 
 
 class Executive : public Manager{
@@ -26,5 +35,13 @@ class Executive : public Manager{
 
 int main(){
     
-    return 0;
+    Manager m1;
+    m1.get();
+    m1.show();
+    Executive e1;
+    e1.get();
+    e1.display();
+
+    
+
 }

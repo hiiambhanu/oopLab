@@ -20,17 +20,21 @@ void reverseit(char *p)
 
 int main()
 {
-    char str[50];
     int n;
     char ch;
     do
     {
+    char str[50];
+
         cout << "Reverse  of a String";
         cout << "\nEnter The String : ";
+        // fflush(stdin);
+        getchar();
         gets(str);
         reverseit(str);
+        cin.clear();
         cout << "Do You Want To Continue : ";
-        cin >> ch;
+        cin >>ch;
     } while (ch != 'n');
     return 0;
 }

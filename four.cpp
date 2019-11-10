@@ -40,6 +40,8 @@ int main()
     phone t;
     t.putdata();
     phone d(212, 717, 8900);
+    cout<<"the default phone is :"<<endl;
+
     d.display();
     return 0;
 }
