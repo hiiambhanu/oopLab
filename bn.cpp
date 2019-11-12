@@ -15,6 +15,10 @@ class student{
         cout << "Enter marks: ";
         cin >> marks;
     }
+
+    void display(){
+        cout<<"Name "<<name<<" Rno: "<<rn<<" Marks :"<<marks;
+    }
 };
 
 int main()
@@ -27,9 +31,23 @@ int main()
     student st[m];
     for(int i=0;i<m;i++)
     {
-        st[i].getData();
-        f.write((char *)&st[i], sizeof(st[i]));
+        student s;
+        s.getData();
+        f.write((char *)&s, sizeof(student));
     }
     f.close();
+
+
+        ///// Reading data to display //////
+    ifstream fin;
+    fin.open("Student.dat");
+    while(!fin.eof()){
+        student s ;
+         fin.read((char*)&s, sizeof(student));
+        s.display();
+    }
+
+    fin.close();
+
     return 0;
 }
